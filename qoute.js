@@ -63,6 +63,14 @@ btnNext.addEventListener("click", () => {
   numberCount();
 });
 
+
+const numbeCount = () => {
+  let numberCount = arryNumber == 0 ? 1: arryNumber +1;
+  number.innerHTML = `${numberCount}/${data[0].qoute.length}`;
+
+}
+
+
 back.addEventListener("click", () => {
  arryNumber--;
   qoutes.innerHTML = `   <i class="fa-solid fa-quote-left"></i>
@@ -73,6 +81,7 @@ back.addEventListener("click", () => {
                     
 `;
 
+numbeCount();
 
 });
 

@@ -5,7 +5,8 @@ let number = document.querySelector("#number");
 let start = document.querySelector("#star");
 
 let getUrlId = window.location.search;
-let params = new URLSearchPgitarams(getUrlId);
+let params = new URLSearchParams(getUrlId);
+// let params = new URLSearchPgitarams(getUrlId);
 let id = params.get("id");
 
 let arryNumber = 0;
@@ -16,7 +17,7 @@ let data = categories.filter(function (category) {
   }
 });
 
-if (data.length == 0) {
+if(data.length == 0) {
   window.location = "index.html";
 }
 
@@ -64,5 +65,5 @@ copy.addEventListener("click", () => {
 const numberCount = () => {
   let numberCount = arryNumber == 0 ? 1 : arryNumber + 1;
   number.innerHTML = `${numberCount}/${data[0].qoute.length}`;
-};
-numberCount();
+
+}

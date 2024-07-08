@@ -57,6 +57,8 @@ btnNext.addEventListener("click", () => {
         ${data[0].qoute[arryNumber].qoute}
                     <i class="fa-solid fa-quote-right"></i>
                     <p class="author-text" id="author-text">- ${data[0].qoute[arryNumber].author} </p>
+
+                    
 `;
   numberCount();
 });
@@ -67,6 +69,8 @@ back.addEventListener("click", () => {
         ${data[0].qoute[arryNumber].qoute}
                     <i class="fa-solid fa-quote-right"></i>
                     <p class="author-text" id="author-text">- ${data[0].qoute[arryNumber].author} </p>
+                  
+                    
 `;
 
 

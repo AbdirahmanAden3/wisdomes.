@@ -4,6 +4,8 @@ let number = document.querySelector("#number");
 let btnNext = document.querySelector("#next");
 let Back = document.querySelector(".Back");
 
+
+
 let arryNumber = 0;
 
 const qoutesOne = () => {
@@ -34,6 +36,17 @@ btnNext.addEventListener("click", () => {
   `;
   numberCount();
 });
+
+Back.addEventListener("click", () => {
+  arryNumber--;
+  qoutes.innerHTML = `   <i class="fa-solid fa-quote-left"></i>
+          ${localstorage[arryNumber].qoute}
+                      <i class="fa-solid fa-quote-right"></i>
+                      <p class="author-text" id="author-text">- ${localstorage[arryNumber].author} </p>
+  `;    
+});
+
+
 
 
 

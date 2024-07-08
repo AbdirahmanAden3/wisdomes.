@@ -63,6 +63,7 @@ body {
   display: flex;
   justify-content: start;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 .buttons .new-qoute {
@@ -73,7 +74,27 @@ body {
   border: none;
 }
 
-.buttons .tweet {
+.buttons .new-qoute:hover {
+  color: #fff;
+  background: transparent;
+  border: 2px solid rgb(6, 228, 50);
+  box-shadow: 2px 2px 2px 2px rgb(6, 228, 50);
+  background: rgb(4, 58, 15);
+}
+
+.buttons .Back:hover {
+  background: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  border: 2px solid rgb(6, 228, 50);
+  box-shadow: 2px 2px 2px 2px rgb(6, 228, 50);
+  background: rgb(4, 58, 15);
+}
+
+
+.buttons .Back {
   background: blue;
   color: #fff;
   padding: 10px 20px;
@@ -93,6 +114,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.buttons i:hover {
+  color: #fff;
+  background: transparent;
+  border: 2px solid rgb(6, 228, 50);
+  box-shadow: 2px 2px 2px 2px rgb(6, 228, 50);
+  background: rgb(4, 58, 15);
+
 }
 
 .qoute-text .d {

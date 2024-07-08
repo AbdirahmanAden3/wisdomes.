@@ -3,6 +3,11 @@ let btnNext = document.querySelector("#next");
 let copy = document.querySelector(".fa-copy");
 let number = document.querySelector("#number");
 let start = document.querySelector("#star");
+let back = document.querySelector(".Back");
+
+
+
+
 
 let getUrlId = window.location.search;
 let params = new URLSearchParams(getUrlId);
@@ -20,6 +25,7 @@ let data = categories.filter(function (category) {
 if(data.length == 0) {
   window.location = "index.html";
 }
+
 
 start.addEventListener("click", () => {
   let dataStart = data[0].qoute[arryNumber];
@@ -55,11 +61,25 @@ btnNext.addEventListener("click", () => {
   numberCount();
 });
 
+back.addEventListener("click", () => {
+ arryNumber--;
+  qoutes.innerHTML = `   <i class="fa-solid fa-quote-left"></i>
+        ${data[0].qoute[arryNumber].qoute}
+                    <i class="fa-solid fa-quote-right"></i>
+                    <p class="author-text" id="author-text">- ${data[0].qoute[arryNumber].author} </p>
+`;
+
+
+});
+
+
+
 copy.addEventListener("click", () => {
   copy.onclick = () => {
     const text = document.querySelector(".qoute-text");
     navigator.clipboard.writeText(text.innerText);
   };
+  alert("copied successfully");
 });
 
 const numberCount = () => {
@@ -67,3 +87,4 @@ const numberCount = () => {
   number.innerHTML = `${numberCount}/${data[0].qoute.length}`;
 
 }
+
